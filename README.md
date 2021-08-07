@@ -11,11 +11,31 @@ This a project for the Checkpoint hackaton. It's a music player that resembles S
 
 ### Backend
 
-Use the package manage [pipenv](https://pypi.org/project/pipenv/) to install the dependecies.
-Go the backend directory where the Pipfile is and run.
+Use the package manager [pipenv](https://pypi.org/project/pipenv/) to install the dependecies.
+Go the backend directory where the Pipfile is and run:
 
 ```bash
 pipenv install
+pipenv shell
+```
+or
+
+```bash
+python -m pipenv install
+python -m pipenv shell
+```
+
+If you are using WSL then use:
+
+```bash
+sudo pipenv install
+sudo pipenv shell
+```
+
+Once installed you can run the server with the next command:
+
+```bash
+uvicorn app.main:app --reload
 ```
 
 ### Frontend
