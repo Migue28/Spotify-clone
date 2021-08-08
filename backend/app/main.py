@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-#from app.api.routes.api import router as api_router
 
 origins = ["http://localhost:8080",]
 
@@ -13,7 +12,6 @@ def get_application() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    #application.include_router(api_router, prefix="/api")
 
     return application
 
