@@ -1,11 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routers.songs import router as songs_router
 
 origins = ["http://localhost:8080",]
 
-def get_application() -> FastAPI:
-    application = FastAPI()
-    application.add_middleware(
+def get_app() -> FastAPI:
+    app = FastAPI()
+    app.include_router(songs_router)
+    app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,
         allow_credentials=True,
@@ -13,6 +15,6 @@ def get_application() -> FastAPI:
         allow_headers=["*"],
     )
 
-    return application
+    return app
 
-app = get_application()
+app = get_app()
