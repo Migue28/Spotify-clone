@@ -19,7 +19,7 @@ async def login():
             scope= os.environ.get('SPOTIPY_SCOPE'),
         )
         spotipy.Spotify(auth_manager=spauth)
-        cached_token = spauth.get_cached_token()
+        cached_token = spauth.get_access_token()
         res = {
             "cached_token": cached_token,
             "refresh_token": cached_token["refresh_token"], 

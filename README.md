@@ -4,8 +4,9 @@ This a project for the Checkpoint hackaton. It's a music player that resembles S
 
 ## Stack and Services
 
-- [Vue.js](https://vuejs.org/)
 - [FastApi](https://fastapi.tiangolo.com/)
+- [Vue.js](https://vuejs.org/)
+- [React.js](https://reactjs.org/)
 
 ## Installation and Usage
 
@@ -38,6 +39,20 @@ Once installed you can run the server with the next command:
 uvicorn app.main:app --reload
 ```
 
-### Frontend
+### Frontend-Vue
 
 Work in progress
+
+### Frontend-React
+
+We use [yarn](https://yarnpkg.com/), but you can use npm.
+Go to the client-react directory and run the following command:
+
+```bash
+yarn
+yarn start
+```
+
+Now, you have the client with react running.
+
+
